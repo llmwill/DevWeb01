@@ -1,141 +1,181 @@
-:root {
-    --primary-color: #19a090;
-    --secondary-color: #0e2c38;
-    --background-color: #f4f4f9;
-    --text-color: #1d1d1d;
-    --light-text-color: #5c5c5c;
-    --accent-color: #2840ce;
-}
-
-* {
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    padding: 0 15px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header {
-    background: var(--secondary-color);
+    background: #333;
     color: #fff;
     padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    margin: 10px 0 0;
 }
 
-nav a {
-    text-decoration: none;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: var(--accent-color);
-}
-
-main {
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-section {
-    margin-bottom: 40px;
-    padding: 20px;
+.section {
+    padding: 50px 0;
     background: #fff;
+    margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: var(--primary-color);
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+#home h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#home p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+#home ul {
+    list-style: none;
+    padding: 0;
     text-align: center;
 }
 
-h3 {
-    color: var(--secondary-color);
+#home ul li {
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 10px;
-    color: var(--light-text-color);
+.resume-section {
+    margin-bottom: 30px;
 }
 
-a {
-    color: var(--accent-color);
+.resume-section h3 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.resume-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-section ul li {
+    margin-bottom: 10px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(50% - 20px);
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.portfolio-item a {
+    color: #007BFF;
     text-decoration: none;
 }
 
-a:hover {
+.portfolio-item a:hover {
     text-decoration: underline;
 }
 
-ul {
-    margin: 10px 0 0 20px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-.gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery figure {
-    width: 300px;
+.contact-info {
+    list-style: none;
+    padding: 0;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
+.contact-info li {
+    margin-bottom: 10px;
 }
 
-figcaption {
-    padding: 10px;
-    background: var(--primary-color);
-    color: #fff;
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
+.contact-info a:hover {
+    text-decoration: underline;
+}
 
 footer {
+    background: #333;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-    background: var(--secondary-color);
-    color: #fff;
-    margin-top: 20px;
-    font-size: 0.9em;
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    header h1 {
+        font-size: 2rem;
     }
 
-    .gallery {
+    nav ul {
         flex-direction: column;
-        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%;
     }
 }
